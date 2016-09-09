@@ -5,8 +5,8 @@
 
 Một điều luôn làm tôi suy nghĩ với vai trò của một Ruby coder - Các Python
 coder có một tài liệu gần như là chuẩn mực về phong cách viết code
-([PEP-8] (http://www.python.org/dev/peps/pep-0008/)) và chúng ta, những
-Ruby coder, vẵn chưa có một tài liệu chính thức hướng dẫn về phong cách
+([PEP-8](http://www.python.org/dev/peps/pep-0008/)) và chúng ta, những
+Ruby coder, vẫn chưa có một tài liệu chính thức hướng dẫn về phong cách
 viết Ruby cũng như những mô hình thực hành tốt nhất.
 Và tôi tin rằng cần một phong cách viết code tốt. Tôi cũng tin rằng một
 cộng đồng lập trình lớn như cộng đồng Ruby, hẳn có đủ năng lực viết ra
@@ -16,7 +16,7 @@ Bản tài liệu này ban đầu được viết để dùng hướng dẫn cá
 cho nội bộ công ty chúng tôi (với sự tin tưởng từ các bạn). Trong một số
 thời điểm, tôi quyết định rằng công việc tôi đang làm hẳn là rất thú vị
 với các thành viên của cộng đồng Ruby nói chung và nó cũng cần thiết cho
-nội bộ các công ty khắc. Và thế giới sẽ được hưởng lợi từ mô hình dựa
+nội bộ các công ty khác. Và thế giới sẽ được hưởng lợi từ mô hình dựa
 vào cộng đồng và phản biện từ cộng đồng sẽ giúp tìm ra những bài học áp
 dụng, những thành ngữ và những quy định viết code Ruby.
 
@@ -26,7 +26,7 @@ và hỗ trợ cho tôi! Cùng nhau làm việc, chúng ta có viết ra cho m�
 tư liệu mang lại nhiều lợi ích cho mỗi nhà phát triển code Ruby.
 
 Bằng cách này, nếu bạn đang tìm hiểu Rails, bạn có thể muốn tham khảo thêm tài liệu
-[Hướng dẫn viết code Ruby on Rails 3 & 4 / Ruby on Rails 3 & 4 Style Guide] (https://github.com/bbatsov/rails-style-guide).
+[Hướng dẫn viết code Ruby on Rails 3 & 4 / Ruby on Rails 3 & 4 Style Guide](https://github.com/bbatsov/rails-style-guide).
 
 # Hướng dẫn cách viết code Ruby (Ruby Style)
 
@@ -57,7 +57,7 @@ Bạn có thể xuất ra file PDF hay bản HTML nhờ sử dụng các công c
 
 [RuboCop](https://github.com/bbatsov/rubocop) là bộ phân tích mã code, dựa trên bản hướng dẫn này.
 
-Các bản dịch cho ngôn các ngữ khác:
+Các bản dịch ở các ngôn ngữ khác:
 
 * [Tiếng Trung Giản thể](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md)
 * [Tiếng Trung Phồn thể](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhTW.md)
@@ -70,7 +70,7 @@ Các bản dịch cho ngôn các ngữ khác:
 * [Tiếng Tây Ban Nha](https://github.com/alemohamad/ruby-style-guide/blob/master/README-esLA.md)
 * [Tiếng Việt](https://github.com/CQBinh/ruby-style-guide/blob/master/README-viVN.md)
 
-## Table of Contents
+## Mục lục
 * [Bố cục trình bày khi viết code / Source code layout](#b%E1%BB%91-c%E1%BB%A5c-tr%C3%ACnh-b%C3%A0y-khi-vi%E1%BA%BFt-code--source-code-layout)
 * [Cú pháp / Syntax](#c%C3%BA-ph%C3%A1p--syntax)
 * [Cách đặt tên / Naming](#c%C3%A1ch-%C4%91%E1%BA%B7t-t%C3%AAn--naming)
@@ -101,7 +101,7 @@ Các bản dịch cho ngôn các ngữ khác:
 <sup>[[link](#utf-8)]</sup>
 
 * <a name="spaces-indentation"></a>
-  Dùng hai(02) **Khoảng trắng**(**spaces**) cho mỗi tầng thụt đầu dòng (hay còn gọi là tab mềm (soft tabs)). Không sử dụng tab cứng (hard tabs).
+  Dùng hai (02) **Khoảng trắng**(**spaces**) cho mỗi tầng thụt đầu dòng (hay còn gọi là tab mềm (soft tabs)). Không sử dụng tab cứng (hard tabs).
 <sup>[[link](#spaces-indentation)]</sup>
 
   ```Ruby
@@ -209,7 +209,7 @@ Các bản dịch cho ngôn các ngữ khác:
   class FooError < StandardError; end
   ```
 
-  The only exception, regarding operators, is the exponent operator:
+  Ngoại lệ duy nhất, liên quan đến các toán tử, là toán tử mũ:
 
   ```Ruby
   # bad
@@ -221,7 +221,7 @@ Các bản dịch cho ngôn các ngữ khác:
 
 * <a name="spaces-braces"></a>
   KHÔNG DÙNG khoảng trắng sau `(`, `[` hay trước `]`, `)`.
-  DÙNG khoảng trắng quanh `{` và `}`.
+  DÙNG khoảng trắng quanh `{` và trước `}`.
 <sup>[[link](#spaces-braces)]</sup>
 
   ```Ruby
@@ -320,7 +320,6 @@ Các bản dịch cho ngôn các ngữ khác:
 
 * <a name="indent-conditional-assignment"></a>
   Khi gán kết quả của một biểu thức cho một biến,
-  When assigning the result of a conditional expression to a variable,
   cặp `case`, `when` hay `if`,`else` cũng phải cùng cấp.
 <sup>[[link](#indent-conditional-assignment)]</sup>
 
@@ -395,7 +394,8 @@ Các bản dịch cho ngôn các ngữ khác:
   ```
 
 * <a name="no-trailing-params-comma"></a>
-  KHÔNG DÙNG dấu phẩy sau tham số cuối cùng khi khai báo phương thức.
+  KHÔNG DÙNG dấu phẩy sau tham số cuối cùng khi khai báo phương thức,
+  đặc biệt khi những tham số không nằm trên những dòng riêng biệt.
 <sup>[[link](#no-trailing-params-comma)]</sup>
 
   ```Ruby
@@ -471,7 +471,7 @@ Các bản dịch cho ngôn các ngữ khác:
     ```
 
   Xem thêm về cuộc thảo luận chọn cách nào:
-  [here](https://github.com/bbatsov/ruby-style-guide/pull/176).
+  [tại đây](https://github.com/bbatsov/ruby-style-guide/pull/176).
 
 * <a name="no-double-indent"></a>
     Khi gọi phương thức có nhiều đối số, nên xuống dòng, và các đối số này
@@ -519,10 +519,6 @@ Các bản dịch cho ngôn các ngữ khác:
 
   ```Ruby
   # bad
-  menu_item = ['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam',
-    'Baked beans', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']
-
-  # good
   menu_item = ['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam',
     'Baked beans', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']
 
@@ -587,7 +583,7 @@ Các bản dịch cho ngôn các ngữ khác:
 
 * <a name="double-colons"></a>
     CHỈ sử dụng `::` cho hằng số (của cả classes và modules)
-    và các hàm dựng (constructors) (vd: `Array()` hoặc `Nokogiri::HTML()`).
+    và các hàm khởi tạo (constructors) (vd: `Array()` hoặc `Nokogiri::HTML()`).
     KHÔNG sử dụng `::` cho các lời gọi hàm thông thường.
 <sup>[[link](#double-colons)]</sup>
 
@@ -1117,7 +1113,7 @@ condition](#safe-assignment-in-condition).
 * <a name="no-dsl-parens"></a>
   Với các phương thức mặc định của DSL (vd: Rake, Rails, RSpec),
   hay các phương thức có chứa "từ khóa" trong Ruby
-  (vd: `attr_reader`, `puts`) và attribute access methods thì không dùng `()`.
+  (vd: `attr_reader`, `puts`) và các phương thức truy cập thuộc tính thì không dùng `()`.
   Còn lại là dùng hết.
 <sup>[[link](#no-dsl-parens)]</sup>
 
@@ -1240,9 +1236,8 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="block-argument"></a>
-  Consider using explicit block argument to avoid writing block literal that
-  just passes its arguments to another block. Beware of the performance impact,
-  though, as the block gets converted to a Proc.
+  Cân nhắc sử dụng đối số cho block tường minh để tránh việc viết block 
+  mà chỉ truyền các đối số của nó cho một block..
 <sup>[[link](#block-argument)]</sup>
 
   ```Ruby
@@ -1472,9 +1467,10 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="no-cryptic-perlisms"></a>
-  Avoid using Perl-style special variables (like `$:`, `$;`, etc. ). They are
-  quite cryptic and their use in anything but one-liner scripts is discouraged.
-  Use the human-friendly aliases provided by the `English` library.
+  Tránh sử dụng các biến đặc biệt kiểu Perl (như `$:`, `$;`,.. ). Chúng khá là khó hiểu
+  và cách sử dụng chúng trong bất cứ tình huống nào ngoài các đoạn code một dòng thì không
+  được khuyến khích. Sử dụng các alias thân thiện với con người được cung cấp bởi thư viện 
+  `tiếng Anh`
 <sup>[[link](#no-cryptic-perlisms)]</sup>
 
   ```Ruby
@@ -1509,10 +1505,10 @@ condition](#safe-assignment-in-condition).
 <sup>[[link](#always-warn-at-runtime)]</sup>
 
 * <a name="no-nested-methods"></a>
-  Do not use nested method definitions, use lambda instead.
-  Nested method definitions actually produce methods in the same scope
-  (e.g. class) as the outer method. Furthermore, the "nested method" will be
-  redefined every time the method containing its definition is invoked.
+  Không sử dụng các định nghĩa phương thức lồng nhau, thay vào đó hãy dùng lambda.
+  Các định nghĩa phương thức lồng nhau thật ra đưa các phương thức trong cùng
+  phạm vi (ví dụ lớp) như là một phương thức bên ngoài. Hơn nữa, các phương thức
+  lồng sẽ bị định nghĩa lại mỗi lần phương thức chứa nó được gọi.
 <sup>[[link](#no-nested-methods)]</sup>
 
   ```Ruby
