@@ -1940,7 +1940,8 @@ Khi dùng lambda với biến, nên đặt biến trong ngoặc tròn.
   ```
 
 * <a name="camelcase-classes"></a>
-  Dùng `CamelCase` cho tên lớp và module.
+  Dùng `CamelCase` cho tên lớp và module. (Giữ những từ viết tắt như HTTP, RFC,
+  XML viết hoa)
 <sup>[[link](#camelcase-classes)]</sup>
 
   ```Ruby
@@ -2048,7 +2049,7 @@ Khi dùng lambda với biến, nên đặt biến trong ngoặc tròn.
   Tên của những phương thức có thể là *nguy hiểm* (vd: phương thức mà chỉnh sửa
   `self` hay các thuộc tính, hay phương thức `exit!` (không thực hiện
   việc `finalize` như `exit`), vv) cần kết thúc bằng một dấu chấm than `!` nếu như
-  đã có một phien bản an toàn của nó rồi (safe version).
+  đã có một phiên bản an toàn của nó rồi (safe version).
 <sup>[[link](#dangerous-method-bang)]</sup>
 
   ```Ruby
