@@ -1,11 +1,4 @@
-## I. Information Checklist
-- [ ] Did you write the 'ISSUE' link?
-- [ ] Did you write 'What you did'?
-- [ ] Did you write 'TODO', when you have to do?
-- [ ] Did you delete unnecessary logs？
-- [ ] The test is passed?
-
-## II. Rails Checklist:
+# I. Rails Checklist:
 (*) When unit tests are required for the project, this is mandatory.
 ### AUTOMATIC CHECK
 
@@ -37,9 +30,9 @@
 - [ ] Should only use 1 or 2 object attribute sublevels ([Law of Demeter](https://medium.com/@gioch/design-patterns-law-of-demeter-with-rails-49a44a9689fe)). Ex: User.company.address → User.company_address
 - [ ] Only use callbacks for the simple, model-related stuff (calculated values, default values, validations)
 
-#### 3. Tests coverage
+#### 3. Tests coverage *
 - [ ] All unit tests must be passed
-- [ ] All code lines changes must be covered * (gem support: [SimpleCov](https://github.com/simplecov-ruby/simplecov))
+- [ ] All code lines changes must be covered (gem support: [SimpleCov](https://github.com/simplecov-ruby/simplecov))
 - [ ] The test case shouldn’t duplicate logic (Using before_action, helper, shared_template, ...)
 - [ ] Full test cases for happy case, error case, exceptions case
 
@@ -48,8 +41,8 @@
 - [ ] Use Indexes for frequently queried columns
 - [ ] Put processes that don't need an immediate response into the background processing (Optional)
 
-#### 6. Security
-- [ ] Using [Strong parameters](https://api.rubyonrails.org/classes/ActionController/StrongParameters.html) when there is a [Mass Assignment](https://guides.rubyonrails.org/v3.2.9/security.html#mass-assignment) *
+#### 5. Security
+- [ ] Using [Strong parameters](https://api.rubyonrails.org/classes/ActionController/StrongParameters.html) when there is a [Mass Assignment](https://guides.rubyonrails.org/v3.2.9/security.html#mass-assignment)
 - [ ] Avoid exposing ENV, secret key on source code or logs
 - [ ] Avoid public documents.
-- [ ] Database password, basic auth, ...: required for strong passwords
+- [ ] Database password,...: required for strong passwords
